@@ -13,3 +13,6 @@ export const registerUser = (userData, history) => dispatch => {
       })
     );
 };
+
+// Login - Get user token
+export const loginUser = userDate => dispatch => {};
