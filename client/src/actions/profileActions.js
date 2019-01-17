@@ -45,6 +45,14 @@ export const addExperience = (expData, history) => dispatch => {
     .catch(err => dispatch({ type: GET_ERRORS, payload: err.response.data }))
 }
 
+// Add Experience
+export const addEducation = (eduData, history) => dispatch => {
+  axios
+    .post('/api/profile/education', eduData)
+    .then(res => history.push('./dashboard'))
+    .catch(err => dispatch({ type: GET_ERRORS, payload: err.response.data }))
+}
+
 // Create profile
 export const createProfile = (profileData, history) => dispatch => {
   axios
