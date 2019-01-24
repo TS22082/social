@@ -9,7 +9,7 @@ export const addPost = postData => dispatch => {
     .catch(err => dispatch({ type: GET_ERRORS, payload: err.response.data }))
 }
 
-// Get Post
+// Get Posts
 export const getPosts = () => dispatch => {
   dispatch(setPostLoading())
   axios
@@ -18,7 +18,7 @@ export const getPosts = () => dispatch => {
     .catch(err => dispatch({ type: GET_POSTS, payload: null }))
 }
 
-//Set loading state
+// Set loading state
 export const setPostLoading = () => {
   return {
     type: POST_LOADING
