@@ -26,12 +26,12 @@ class Profiles extends Component {
     }
 
     return (
-      <div className="profiles">
+      <div className="profiles" style={{ minHeight: '80vh' }}>
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <h1 className="display-4 text-center">Family Profiles</h1>
-              <p className="lead text-center">Browse and connect with family</p>
+              <h1 className="display-4 text-center">Profiles</h1>
+              <p className="lead text-center">Browse and connect with people</p>
               {profileItems}
             </div>
           </div>
