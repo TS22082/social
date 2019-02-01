@@ -1,7 +1,7 @@
 {
   "name": "mern",
   "version": "1.0.0",
-  "description": "social net for devs",
+  "description": "social network starter",
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
