@@ -56,7 +56,7 @@ class App extends Component {
           <div className="App">
             <Navbar />
             <Route exact path="/" component={Landing} />
-            <div className="container" style={{ minHeight: '80vh' }}>
+            <div className="container">
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/profiles" component={Profiles} />
@@ -83,6 +83,7 @@ class App extends Component {
                   exact
                   path="/add-experience"
                   component={AddExperience}
+                  style={{ minHeight: '80vh' }}
                 />
               </Switch>
               <Switch>

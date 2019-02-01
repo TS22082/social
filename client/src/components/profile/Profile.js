@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import ProfileAbout from './ProfileAbout'
 import ProfileCreds from './ProfileCreds'
-import ProfileGithub from './ProfileGithub'
 import ProfileHeader from './ProfileHeader'
 import Spinner from './../common/Spinner'
 import { connect } from 'react-redux'
@@ -44,15 +43,12 @@ class Profile extends Component {
             education={profile.education}
             experience={profile.experience}
           />
-          {profile.githubusername ? (
-            <ProfileGithub username={profile.githubusername} />
-          ) : null}
         </div>
       )
     }
 
     return (
-      <div className="profile">
+      <div className="profile" style={{ minHeight: '80vh' }}>
         <div className="container">
           <div className="row">
             <div className="col-md-12">{profileContent}</div>

@@ -124,7 +124,7 @@ class CreateProfile extends Component {
       { label: 'Other', value: 'Other' }
     ]
     return (
-      <div className="create-profile">
+      <div className="create-profile" style={{ minHeight: '80vh' }}>
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
