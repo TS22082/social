@@ -5,7 +5,6 @@ import { withRouter, Link } from 'react-router-dom'
 import TextFieldGroup from '../common/TextFieldGroup'
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup'
 import InputGroup from './../common/InputGroup'
-import SelectListGroup from '../common/SelectListGroup'
 import { createProfile, getCurrentProfile } from '../../actions/profileActions'
 import isEmpty from './../../validation/isEmpty'
 
@@ -188,7 +187,7 @@ class EditProfile extends Component {
                   value={this.state.status}
                   onChange={this.onChange}
                   error={errors.status}
-                  info="What do you do for work?"
+                  info="What is your professional title?"
                 />
                 <TextFieldGroup
                   placeholder="Company"
