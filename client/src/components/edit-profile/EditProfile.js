@@ -163,18 +163,6 @@ class EditProfile extends Component {
         </div>
       )
     }
-    //Select options for status
-    const options = [
-      { label: '* Select Professional Status', value: 0 },
-      { label: 'Developer', value: 'Developer' },
-      { label: 'Junior Developer', value: 'Junior Developer' },
-      { label: 'Desior Developer', value: 'Desior Developer' },
-      { label: 'Manager', value: 'Manager' },
-      { label: 'Student or learning', value: 'Student or learning' },
-      { label: 'Instructor or Teacher', value: 'Instructor or Teacher' },
-      { label: 'Intern', value: 'Intern' },
-      { label: 'Other', value: 'Other' }
-    ]
     return (
       <div className="create-profile">
         <div className="container">
@@ -194,14 +182,13 @@ class EditProfile extends Component {
                   error={errors.handle}
                   info="A unique handle for your profile URL"
                 />
-                <SelectListGroup
-                  placeholder="Status"
+                <TextFieldGroup
+                  placeholder="Profession"
                   name="status"
                   value={this.state.status}
                   onChange={this.onChange}
                   error={errors.status}
-                  options={options}
-                  info="Give us an idea of where you are at in you career"
+                  info="What do you do for work?"
                 />
                 <TextFieldGroup
                   placeholder="Company"
