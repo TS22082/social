@@ -62,9 +62,17 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
         <div className="container">
-          <Link className="navbar-brand" to="/">
-            Yappers
-          </Link>
+          {isAuthenticated ? (
+            <Link className="navbar-brand" to="/profiles">
+              {' '}
+              People
+            </Link>
+          ) : (
+            <Link className="navbar-brand" to="/">
+              Yappers
+            </Link>
+          )}
+
           <button
             className="navbar-toggler"
             type="button"
@@ -75,12 +83,7 @@ class Navbar extends Component {
           </button>
           <div className="collapse navbar-collapse" id="mobile-nav">
             <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to="/profiles">
-                  {' '}
-                  People
-                </Link>
-              </li>
+              <li className="nav-item" />
             </ul>
             {isAuthenticated ? authLinks : guestLinks}
           </div>
